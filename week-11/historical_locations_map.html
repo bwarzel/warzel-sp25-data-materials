@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1977b221aca1b8d12b76a9fadb36b8bc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+     bottom: 50px; right: 50px; width: 180px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:12px;
+     background-color:white; padding: 10px;
+     border-radius: 6px;">
+     <p><b>Department Legend</b></p>
+     <p><i class="fa fa-circle" style="color:green"></i> Interior</p>
+     <p><i class="fa fa-circle" style="color:blue"></i> Judicial</p>
+     <p><i class="fa fa-circle" style="color:red"></i> Treasury</p>
+</div>
+    
+            <div class="folium-map" id="map_1977b221aca1b8d12b76a9fadb36b8bc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1977b221aca1b8d12b76a9fadb36b8bc = L.map(
+                "map_1977b221aca1b8d12b76a9fadb36b8bc",
+                {
+                    center: [41.031666799999996, -108.7539145],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1d628937eb8adaf801c5447f87e5cbf5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1d628937eb8adaf801c5447f87e5cbf5.addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+            var circle_marker_0a2fa24ba4bfa13ef1dab88ed35369a7 = L.circleMarker(
+                [42.66969, -103.43548],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_ac227b240c817313571ff4765322f200 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cc83324d14b2bcacdf9512f59340607a = $(`<div id="html_cc83324d14b2bcacdf9512f59340607a" style="width: 100.0%; height: 100.0%;">     <b>Red Cloud Agency, NE</b><br>     Department: Department of the Interior<br>     Type: Office of Indian Affairs<br>     People: 6     </div>`)[0];
+                popup_ac227b240c817313571ff4765322f200.setContent(html_cc83324d14b2bcacdf9512f59340607a);
+            
+        
+
+        circle_marker_0a2fa24ba4bfa13ef1dab88ed35369a7.bindPopup(popup_ac227b240c817313571ff4765322f200)
+        ;
+
+        
+    
+    
+            circle_marker_0a2fa24ba4bfa13ef1dab88ed35369a7.bindTooltip(
+                `<div>
+                     Red Cloud Agency
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_49f24b4273755bea5c0350368ec3242f = L.circleMarker(
+                [46.0645809, -118.343021],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_8a8268b0c997c47ee01641174a50deda = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b7b0c50ede171c5cb0029f5f3b2a7a7 = $(`<div id="html_9b7b0c50ede171c5cb0029f5f3b2a7a7" style="width: 100.0%; height: 100.0%;">     <b>Walla Walla, WA</b><br>     Department: Judicial<br>     Type: Commissioner<br>     People: 1     </div>`)[0];
+                popup_8a8268b0c997c47ee01641174a50deda.setContent(html_9b7b0c50ede171c5cb0029f5f3b2a7a7);
+            
+        
+
+        circle_marker_49f24b4273755bea5c0350368ec3242f.bindPopup(popup_8a8268b0c997c47ee01641174a50deda)
+        ;
+
+        
+    
+    
+            circle_marker_49f24b4273755bea5c0350368ec3242f.bindTooltip(
+                `<div>
+                     Walla Walla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_801a27cc6e958c21ef9430846cc25c93 = L.circleMarker(
+                [31.549333, -97.14667],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_183d8b107ac0cc46d0ea6fa7e997b91b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_624daa2d73187c44b964a2336db89412 = $(`<div id="html_624daa2d73187c44b964a2336db89412" style="width: 100.0%; height: 100.0%;">     <b>Waco, TX</b><br>     Department: Judicial<br>     Type: Court<br>     People: 2     </div>`)[0];
+                popup_183d8b107ac0cc46d0ea6fa7e997b91b.setContent(html_624daa2d73187c44b964a2336db89412);
+            
+        
+
+        circle_marker_801a27cc6e958c21ef9430846cc25c93.bindPopup(popup_183d8b107ac0cc46d0ea6fa7e997b91b)
+        ;
+
+        
+    
+    
+            circle_marker_801a27cc6e958c21ef9430846cc25c93.bindTooltip(
+                `<div>
+                     Waco
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_622ea8d8a918ed9d68f05922053cad39 = L.circleMarker(
+                [45.5230622, -122.676482],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_9de8120227a09feec1f32bcb067c4624 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_60d13572f5502433f3689249b937e7c9 = $(`<div id="html_60d13572f5502433f3689249b937e7c9" style="width: 100.0%; height: 100.0%;">     <b>Portland, OR</b><br>     Department: Judicial<br>     Type: Commissioner<br>     People: 1     </div>`)[0];
+                popup_9de8120227a09feec1f32bcb067c4624.setContent(html_60d13572f5502433f3689249b937e7c9);
+            
+        
+
+        circle_marker_622ea8d8a918ed9d68f05922053cad39.bindPopup(popup_9de8120227a09feec1f32bcb067c4624)
+        ;
+
+        
+    
+    
+            circle_marker_622ea8d8a918ed9d68f05922053cad39.bindTooltip(
+                `<div>
+                     Portland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07759cf9a31bcb5e11d194c206fad6a1 = L.circleMarker(
+                [46.0922614, -100.629022],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_428fd2782e54da61660d1974162fec9b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0d581f4c37213b836c44042cc1aabd18 = $(`<div id="html_0d581f4c37213b836c44042cc1aabd18" style="width: 100.0%; height: 100.0%;">     <b>Standing Rock Agency, ND</b><br>     Department: Department of the Interior<br>     Type: Office of Indian Affairs<br>     People: 14     </div>`)[0];
+                popup_428fd2782e54da61660d1974162fec9b.setContent(html_0d581f4c37213b836c44042cc1aabd18);
+            
+        
+
+        circle_marker_07759cf9a31bcb5e11d194c206fad6a1.bindPopup(popup_428fd2782e54da61660d1974162fec9b)
+        ;
+
+        
+    
+    
+            circle_marker_07759cf9a31bcb5e11d194c206fad6a1.bindTooltip(
+                `<div>
+                     Standing Rock Agency
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3c6a5582b7c94dd107c780b3929c78b = L.circleMarker(
+                [38.7296252, -120.798546],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_9ff7ade71ad6bbc23ad57ca2514206ff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5479831e68a69bf80c44da4b6394f655 = $(`<div id="html_5479831e68a69bf80c44da4b6394f655" style="width: 100.0%; height: 100.0%;">     <b>Placerville, CA</b><br>     Department: Treasury Department<br>     Type: Internal Revenue_Deputy Collector<br>     People: 1     </div>`)[0];
+                popup_9ff7ade71ad6bbc23ad57ca2514206ff.setContent(html_5479831e68a69bf80c44da4b6394f655);
+            
+        
+
+        circle_marker_d3c6a5582b7c94dd107c780b3929c78b.bindPopup(popup_9ff7ade71ad6bbc23ad57ca2514206ff)
+        ;
+
+        
+    
+    
+            circle_marker_d3c6a5582b7c94dd107c780b3929c78b.bindTooltip(
+                `<div>
+                     Placerville
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b5de0394a7f50627200b41b745c99213 = L.circleMarker(
+                [35.5942137, -105.222798],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_59c15a8de8179d474d6e98e220bd6776 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d27e4c76a87a485c8cd997248594fa1b = $(`<div id="html_d27e4c76a87a485c8cd997248594fa1b" style="width: 100.0%; height: 100.0%;">     <b>Las Vegas, NM</b><br>     Department: Judicial<br>     Type: Commissioner<br>     People: 1     </div>`)[0];
+                popup_59c15a8de8179d474d6e98e220bd6776.setContent(html_d27e4c76a87a485c8cd997248594fa1b);
+            
+        
+
+        circle_marker_b5de0394a7f50627200b41b745c99213.bindPopup(popup_59c15a8de8179d474d6e98e220bd6776)
+        ;
+
+        
+    
+    
+            circle_marker_b5de0394a7f50627200b41b745c99213.bindTooltip(
+                `<div>
+                     Las Vegas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d8b635ba45b5f15f6e50a0987c2b61ca = L.circleMarker(
+                [45.672075, -118.788597],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_e9be573bfe03231757b74729878f24e5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_534f7768d5f296d1abf764e0ce9c3d42 = $(`<div id="html_534f7768d5f296d1abf764e0ce9c3d42" style="width: 100.0%; height: 100.0%;">     <b>Pendleton, OR</b><br>     Department: Judicial<br>     Type: Commissioner<br>     People: 1     </div>`)[0];
+                popup_e9be573bfe03231757b74729878f24e5.setContent(html_534f7768d5f296d1abf764e0ce9c3d42);
+            
+        
+
+        circle_marker_d8b635ba45b5f15f6e50a0987c2b61ca.bindPopup(popup_e9be573bfe03231757b74729878f24e5)
+        ;
+
+        
+    
+    
+            circle_marker_d8b635ba45b5f15f6e50a0987c2b61ca.bindTooltip(
+                `<div>
+                     Pendleton
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_493fd8a6883d1bd3928a69c45e3b43ec = L.circleMarker(
+                [37.1694632, -104.500541],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_00b91ca9d22dd032ca4beec1a62f0a4e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_646378a5f42889478e0960e79bcae030 = $(`<div id="html_646378a5f42889478e0960e79bcae030" style="width: 100.0%; height: 100.0%;">     <b>Trinidad, CO</b><br>     Department: Judicial<br>     Type: Commissioner<br>     People: 1     </div>`)[0];
+                popup_00b91ca9d22dd032ca4beec1a62f0a4e.setContent(html_646378a5f42889478e0960e79bcae030);
+            
+        
+
+        circle_marker_493fd8a6883d1bd3928a69c45e3b43ec.bindPopup(popup_00b91ca9d22dd032ca4beec1a62f0a4e)
+        ;
+
+        
+    
+    
+            circle_marker_493fd8a6883d1bd3928a69c45e3b43ec.bindTooltip(
+                `<div>
+                     Trinidad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d5b9063c37addf0c7100833589c2e6e = L.circleMarker(
+                [41.2523634, -95.997988],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_1977b221aca1b8d12b76a9fadb36b8bc);
+        
+    
+        var popup_a9d81f63b0093a9919a356b75554b6d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_28ae4244a277bfe97e14bac2dcca4f55 = $(`<div id="html_28ae4244a277bfe97e14bac2dcca4f55" style="width: 100.0%; height: 100.0%;">     <b>Omaha, NE</b><br>     Department: Judicial<br>     Type: Court<br>     People: 6     </div>`)[0];
+                popup_a9d81f63b0093a9919a356b75554b6d1.setContent(html_28ae4244a277bfe97e14bac2dcca4f55);
+            
+        
+
+        circle_marker_8d5b9063c37addf0c7100833589c2e6e.bindPopup(popup_a9d81f63b0093a9919a356b75554b6d1)
+        ;
+
+        
+    
+    
+            circle_marker_8d5b9063c37addf0c7100833589c2e6e.bindTooltip(
+                `<div>
+                     Omaha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
